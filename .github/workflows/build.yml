@@ -45,8 +45,7 @@ jobs:
           mkdir -p site
           find . -name "*.cs3" -exec cp {} site/ \;
           sed 's|raw.githubusercontent.com/davidabsenta/LatinoAbs/builds|davidabsenta.github.io/LatinoAbs|g' build/plugins.json > site/index.json
-          echo "Archivos en site/:"
-          ls -la site/
+          printf '/*\n  Access-Control-Allow-Origin: *\n' > site/_headers
           cat site/index.json
 
       - name: Publicar en GitHub Pages
