@@ -8,9 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
 
     steps:
       - name: Checkout codigo
@@ -39,35 +36,21 @@ jobs:
         run: chmod +x gradlew
 
       - name: Compilar todos los plugins
-        run: ./gradlew assembleRelease
+        run: ./gradlew makePluginsJson
         env:
           GITHUB_REPOSITORY: davidabsenta/LatinoAbs
 
-      - name: Buscar cs3 y generar site
+      - name: Buscar cs3 y json
         run: |
-          mkdir -p site
           echo "Buscando archivos .cs3..."
           find . -name "*.cs3" -print
+          echo "Buscando index.json..."
+          find . -name "*.json" | grep -v gradle | grep -v build/intermediates
+          mkdir -p site
           find . -name "*.cs3" -exec cp {} site/ \;
+          find . -name "index.json" | grep -v gradle | grep -v build/intermediates | head -1 | xargs -I{} cp {} site/
           echo "Archivos en site/:"
           ls -la site/
-          
-          cd site
-          echo "[" > index.json
-          first=true
-          for cs3 in *.cs3; do
-            [ -f "$cs3" ] || continue
-            name=$(basename "$cs3" .cs3)
-            url="https://davidabsenta.github.io/LatinoAbs/${cs3}"
-            if [ "$first" = true ]; then
-              first=false
-            else
-              echo "," >> index.json
-            fi
-            echo "{\"name\":\"$name\",\"url\":\"$url\",\"status\":2,\"version\":1}" >> index.json
-          done
-          echo "]" >> index.json
-          cat index.json
 
       - name: Publicar en GitHub Pages
         uses: actions/upload-pages-artifact@v3
