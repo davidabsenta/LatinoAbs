@@ -1,0 +1,8 @@
+com.miprovider.SoloLatinoProvider-pngs-0 C:\Users\david\Documents\mis-providers-cloudstream\SoloLatinoProvider\build\generated\res\pngs\release
+com.miprovider.SoloLatinoProvider-updated_navigation_xml-1 C:\Users\david\Documents\mis-providers-cloudstream\SoloLatinoProvider\build\generated\updated_navigation_xml\release
+com.miprovider.SoloLatinoProvider-mergeReleaseResources-2 C:\Users\david\Documents\mis-providers-cloudstream\SoloLatinoProvider\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.miprovider.SoloLatinoProvider-mergeReleaseResources-3 C:\Users\david\Documents\mis-providers-cloudstream\SoloLatinoProvider\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.miprovider.SoloLatinoProvider-release-4 C:\Users\david\Documents\mis-providers-cloudstream\SoloLatinoProvider\build\intermediates\merged_res\release\mergeReleaseResources
+com.miprovider.SoloLatinoProvider-release-5 C:\Users\david\Documents\mis-providers-cloudstream\SoloLatinoProvider\build\intermediates\packaged_res\release\packageReleaseResources
+com.miprovider.SoloLatinoProvider-main-6 C:\Users\david\Documents\mis-providers-cloudstream\SoloLatinoProvider\src\main\res
+com.miprovider.SoloLatinoProvider-release-7 C:\Users\david\Documents\mis-providers-cloudstream\SoloLatinoProvider\src\release\res

@@ -1,0 +1,8 @@
+com.miprovider.AnimeJlProvider-pngs-0 C:\Users\david\Documents\mis-providers-cloudstream\AnimeJlProvider\build\generated\res\pngs\release
+com.miprovider.AnimeJlProvider-updated_navigation_xml-1 C:\Users\david\Documents\mis-providers-cloudstream\AnimeJlProvider\build\generated\updated_navigation_xml\release
+com.miprovider.AnimeJlProvider-mergeReleaseResources-2 C:\Users\david\Documents\mis-providers-cloudstream\AnimeJlProvider\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.miprovider.AnimeJlProvider-mergeReleaseResources-3 C:\Users\david\Documents\mis-providers-cloudstream\AnimeJlProvider\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.miprovider.AnimeJlProvider-release-4 C:\Users\david\Documents\mis-providers-cloudstream\AnimeJlProvider\build\intermediates\merged_res\release\mergeReleaseResources
+com.miprovider.AnimeJlProvider-release-5 C:\Users\david\Documents\mis-providers-cloudstream\AnimeJlProvider\build\intermediates\packaged_res\release\packageReleaseResources
+com.miprovider.AnimeJlProvider-main-6 C:\Users\david\Documents\mis-providers-cloudstream\AnimeJlProvider\src\main\res
+com.miprovider.AnimeJlProvider-release-7 C:\Users\david\Documents\mis-providers-cloudstream\AnimeJlProvider\src\release\res

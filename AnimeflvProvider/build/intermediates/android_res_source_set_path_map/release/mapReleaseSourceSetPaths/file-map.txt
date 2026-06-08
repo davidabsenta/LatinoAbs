@@ -1,0 +1,8 @@
+com.miprovider.AnimeflvProvider-pngs-0 C:\Users\david\Documents\mis-providers-cloudstream\AnimeflvProvider\build\generated\res\pngs\release
+com.miprovider.AnimeflvProvider-updated_navigation_xml-1 C:\Users\david\Documents\mis-providers-cloudstream\AnimeflvProvider\build\generated\updated_navigation_xml\release
+com.miprovider.AnimeflvProvider-mergeReleaseResources-2 C:\Users\david\Documents\mis-providers-cloudstream\AnimeflvProvider\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.miprovider.AnimeflvProvider-mergeReleaseResources-3 C:\Users\david\Documents\mis-providers-cloudstream\AnimeflvProvider\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.miprovider.AnimeflvProvider-release-4 C:\Users\david\Documents\mis-providers-cloudstream\AnimeflvProvider\build\intermediates\merged_res\release\mergeReleaseResources
+com.miprovider.AnimeflvProvider-release-5 C:\Users\david\Documents\mis-providers-cloudstream\AnimeflvProvider\build\intermediates\packaged_res\release\packageReleaseResources
+com.miprovider.AnimeflvProvider-main-6 C:\Users\david\Documents\mis-providers-cloudstream\AnimeflvProvider\src\main\res
+com.miprovider.AnimeflvProvider-release-7 C:\Users\david\Documents\mis-providers-cloudstream\AnimeflvProvider\src\release\res
