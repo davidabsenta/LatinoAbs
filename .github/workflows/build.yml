@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout codigo
@@ -40,28 +43,31 @@ jobs:
         env:
           GITHUB_REPOSITORY: davidabsenta/LatinoAbs
 
-      - name: Recolectar cs3 y generar index.json
+      - name: Buscar cs3 y generar site
         run: |
           mkdir -p site
-          find . -name "*.cs3" | while read f; do
-            cp "$f" site/
-          done
+          echo "Buscando archivos .cs3..."
+          find . -name "*.cs3" -print
+          find . -name "*.cs3" -exec cp {} site/ \;
+          echo "Archivos en site/:"
+          ls -la site/
           
-          echo "[" > site/index.json
+          cd site
+          echo "[" > index.json
           first=true
-          for cs3 in site/*.cs3; do
+          for cs3 in *.cs3; do
+            [ -f "$cs3" ] || continue
             name=$(basename "$cs3" .cs3)
-            url="https://davidabsenta.github.io/LatinoAbs/${name}.cs3"
+            url="https://davidabsenta.github.io/LatinoAbs/${cs3}"
             if [ "$first" = true ]; then
               first=false
             else
-              echo "," >> site/index.json
+              echo "," >> index.json
             fi
-            echo "{\"name\":\"$name\",\"url\":\"$url\",\"status\":2,\"version\":1}" >> site/index.json
+            echo "{\"name\":\"$name\",\"url\":\"$url\",\"status\":2,\"version\":1}" >> index.json
           done
-          echo "]" >> site/index.json
-          
-          cat site/index.json
+          echo "]" >> index.json
+          cat index.json
 
       - name: Publicar en GitHub Pages
         uses: actions/upload-pages-artifact@v3
