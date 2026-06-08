@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build:
@@ -40,18 +37,48 @@ jobs:
 
       - name: Compilar todos los plugins
         run: ./gradlew assembleRelease
+        env:
+          GITHUB_REPOSITORY: davidabsenta/LatinoAbs
 
-      - name: Recolectar archivos cs3
+      - name: Recolectar cs3 y generar index.json
         run: |
-          mkdir -p outputs
+          mkdir -p site
           find . -name "*.cs3" | while read f; do
-            cp "$f" outputs/
+            cp "$f" site/
           done
-          ls -la outputs/
+          
+          echo "[" > site/index.json
+          first=true
+          for cs3 in site/*.cs3; do
+            name=$(basename "$cs3" .cs3)
+            url="https://davidabsenta.github.io/LatinoAbs/${name}.cs3"
+            if [ "$first" = true ]; then
+              first=false
+            else
+              echo "," >> site/index.json
+            fi
+            echo "{\"name\":\"$name\",\"url\":\"$url\",\"status\":2,\"version\":1}" >> site/index.json
+          done
+          echo "]" >> site/index.json
+          
+          cat site/index.json
 
-      - name: Subir cs3 como artifacts
-        uses: actions/upload-artifact@v4
+      - name: Publicar en GitHub Pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: plugins-cs3
-          path: outputs/*.cs3
-          if-no-files-found: warn
+          path: site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
