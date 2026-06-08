@@ -44,7 +44,7 @@ jobs:
         run: |
           mkdir -p site
           find . -name "*.cs3" -exec cp {} site/ \;
-          cp build/plugins.json site/index.json
+          sed 's|raw.githubusercontent.com/davidabsenta/LatinoAbs/builds|davidabsenta.github.io/LatinoAbs|g' build/plugins.json > site/index.json
           echo "Archivos en site/:"
           ls -la site/
           cat site/index.json
