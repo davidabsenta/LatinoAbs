@@ -1,0 +1,117 @@
+[
+    {
+        "url": "https://raw.githubusercontent.com/davidabsenta/LatinoAbs/builds/Animeav1.cs3",
+        "status": 1,
+        "version": 1,
+        "name": "Animeav1",
+        "internalName": "Animeav1",
+        "authors": [
+            "DavidAbsenta"
+        ],
+        "fileSize": 15161,
+        "repositoryUrl": "https://github.com/davidabsenta/LatinoAbs",
+        "language": "es",
+        "tvTypes": [
+            "Movie",
+            "Anime"
+        ],
+        "apiVersion": 1,
+        "fileHash": "sha256-495c33e22acf1111556f729df9d88c0d268b3482aaba2476434cf82f17cce321"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/davidabsenta/LatinoAbs/builds/AnimeflvIOProvider.cs3",
+        "status": 1,
+        "version": 1,
+        "name": "AnimeflvIOProvider",
+        "internalName": "AnimeflvIOProvider",
+        "authors": [
+            "DavidAbsenta"
+        ],
+        "fileSize": 21429,
+        "repositoryUrl": "https://github.com/davidabsenta/LatinoAbs",
+        "language": "es",
+        "tvTypes": [
+            "Movie",
+            "Anime"
+        ],
+        "apiVersion": 1,
+        "fileHash": "sha256-4eef44edf0b704395e6d98baf2d15bd18999d1e215d70bbb948f21d84ec555f4"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/davidabsenta/LatinoAbs/builds/AnimeflvProvider.cs3",
+        "status": 1,
+        "version": 1,
+        "name": "AnimeflvProvider",
+        "internalName": "AnimeflvProvider",
+        "authors": [
+            "DavidAbsenta"
+        ],
+        "fileSize": 20834,
+        "repositoryUrl": "https://github.com/davidabsenta/LatinoAbs",
+        "language": "es",
+        "tvTypes": [
+            "Movie",
+            "Anime"
+        ],
+        "apiVersion": 1,
+        "fileHash": "sha256-daa8f57cdbf6975a55f8b07618bfb399265def063a4bf492106a022eb99a7261"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/davidabsenta/LatinoAbs/builds/AnimeJlProvider.cs3",
+        "status": 1,
+        "version": 1,
+        "name": "AnimeJlProvider",
+        "internalName": "AnimeJlProvider",
+        "authors": [
+            "misajimenezmx"
+        ],
+        "fileSize": 15159,
+        "repositoryUrl": "https://github.com/davidabsenta/LatinoAbs",
+        "language": "es",
+        "tvTypes": [
+            "Movie",
+            "Anime"
+        ],
+        "iconUrl": "https://www.anime-jl.net/favicon.ico",
+        "apiVersion": 1,
+        "fileHash": "sha256-2c148ce33d3de660cf5947c01a432a940767b4d792c64d357a96434b737262d0"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/davidabsenta/LatinoAbs/builds/AnimeProvider.cs3",
+        "status": 1,
+        "version": 1,
+        "name": "AnimeProvider",
+        "internalName": "AnimeProvider",
+        "authors": [
+            "DavidAbsenta"
+        ],
+        "fileSize": 5163,
+        "repositoryUrl": "https://github.com/davidabsenta/LatinoAbs",
+        "language": "es",
+        "tvTypes": [
+            "Anime",
+            "Movie"
+        ],
+        "apiVersion": 1,
+        "fileHash": "sha256-fa012fe60cd518301e0615236c9859dc22ec90d4d593f4eb7cfcc801709f96a8"
+    },
+    {
+        "url": "https://raw.githubusercontent.com/davidabsenta/LatinoAbs/builds/SoloLatinoProvider.cs3",
+        "status": 1,
+        "version": 1,
+        "name": "SoloLatinoProvider",
+        "internalName": "SoloLatinoProvider",
+        "authors": [
+            "DavidAbsenta"
+        ],
+        "fileSize": 16832,
+        "repositoryUrl": "https://github.com/davidabsenta/LatinoAbs",
+        "language": "es",
+        "tvTypes": [
+            "Movie",
+            "Anime"
+        ],
+        "apiVersion": 1,
+        "fileHash": "sha256-9fcab854ed9d6af89358d848dd3c8cc97a2b3a9798f5a3bafc8b3429a4b989cf"
+    }
+]

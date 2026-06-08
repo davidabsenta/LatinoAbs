@@ -1,0 +1,8 @@
+{
+  "name": "LatinoAbs",
+  "description": "Providers en español",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/davidabsenta/LatinoAbs/builds/plugins.json"
+  ]
+}
