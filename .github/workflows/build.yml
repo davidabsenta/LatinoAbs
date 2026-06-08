@@ -40,17 +40,14 @@ jobs:
         env:
           GITHUB_REPOSITORY: davidabsenta/LatinoAbs
 
-      - name: Buscar cs3 y json
+      - name: Armar site
         run: |
-          echo "Buscando archivos .cs3..."
-          find . -name "*.cs3" -print
-          echo "Buscando index.json..."
-          find . -name "*.json" | grep -v gradle | grep -v build/intermediates
           mkdir -p site
           find . -name "*.cs3" -exec cp {} site/ \;
-          find . -name "index.json" | grep -v gradle | grep -v build/intermediates | head -1 | xargs -I{} cp {} site/
+          cp build/plugins.json site/index.json
           echo "Archivos en site/:"
           ls -la site/
+          cat site/index.json
 
       - name: Publicar en GitHub Pages
         uses: actions/upload-pages-artifact@v3
