@@ -46,7 +46,17 @@ jobs:
         run: |
           mkdir -p builds
           find . -name "*.cs3" -not -path "./builds/*" -exec cp {} builds/ \;
-          cp build/plugins.json builds/index.json
+          cp build/plugins.json builds/plugins.json
+          cat > builds/repo.json << 'REPOJSON'
+          {
+            "name": "LatinoAbs",
+            "description": "Providers en español",
+            "manifestVersion": 1,
+            "pluginLists": [
+              "https://raw.githubusercontent.com/davidabsenta/LatinoAbs/builds/plugins.json"
+            ]
+          }
+          REPOJSON
           cd builds
           git init
           git config user.name "github-actions"
