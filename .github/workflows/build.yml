@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout codigo
@@ -40,30 +42,16 @@ jobs:
         env:
           GITHUB_REPOSITORY: davidabsenta/LatinoAbs
 
-      - name: Armar site
+      - name: Publicar en rama builds
         run: |
-          mkdir -p site
-          find . -name "*.cs3" -exec cp {} site/ \;
-          sed 's|raw.githubusercontent.com/davidabsenta/LatinoAbs/builds|davidabsenta.github.io/LatinoAbs|g' build/plugins.json > site/index.json
-          printf '/*\n  Access-Control-Allow-Origin: *\n' > site/_headers
-          cat site/index.json
-
-      - name: Publicar en GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site/
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          mkdir -p builds
+          find . -name "*.cs3" -not -path "./builds/*" -exec cp {} builds/ \;
+          cp build/plugins.json builds/index.json
+          cd builds
+          git init
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git checkout -b builds
+          git add .
+          git commit -m "update builds"
+          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/davidabsenta/LatinoAbs.git builds
